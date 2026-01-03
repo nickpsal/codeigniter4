@@ -310,7 +310,7 @@
                 <button type="submit" class="btn btn-primary">
                     <i class="fas fa-save"></i> Αποθήκευση
                 </button>
-                <a href="<?= base_url('get_users') ?>" class="btn btn-secondary" style="text-decoration: none;">
+                <a href="<?= base_url('users') ?>" class="btn btn-secondary" style="text-decoration: none;">
                     <i class="fas fa-times"></i> Ακύρωση
                 </a>
             </div>
