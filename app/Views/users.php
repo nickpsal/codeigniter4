@@ -41,8 +41,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Username</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
                     <th>Email</th>
                     <th>Created at</th>
                     <th>Actions</th>
@@ -51,22 +49,16 @@
             <tbody>
                 <?php foreach ($users as $user): ?>
                     <tr>
-                        <td><?= esc($user['id']) ?></td>
-                        <td><?= esc($user['username']) ?></td>
-                        <td><?= esc($user['first_name']) ?></td>
-                        <td><?= esc($user['last_name']) ?></td>
-                        <td><?= esc($user['email']) ?></td>
-                        <td><?= esc($user['created_at']) ?></td>
+                        <td><?= esc($user->id) ?></td>
+                        <td><?= esc($user->username) ?></td>
+                        <td><?= esc($user->email) ?></td>
+                        <td><?= esc($user->created_at) ?></td>
                         <td class="action-icons">
-                            <a href="<?= base_url('user/id/' . $user['id']) ?>" title="View">
-                                <i class="fas fa-eye"></i>
-                            </a>
-
-                            <a href="<?= base_url('user/edit/' . $user['id']) ?>" title="Edit">
+                            <a href="<?= base_url('user/edit/' . $user->id) ?>" title="Edit">
                                 <i class="fas fa-edit"></i>
                             </a>
 
-                            <form action="<?= base_url('user/delete/' . $user['id']) ?>"
+                            <form action="<?= base_url('user/delete/' . $user->id) ?>"
                                 method="post"
                                 class="delete-form"
                                 style="display:inline;">

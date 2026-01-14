@@ -211,7 +211,7 @@
         <?php endif; ?>
 
         <?php if (isset($user)): ?>
-        <form method="POST" action="<?= base_url('user/edit/' . $user['id']) ?>" id="editUserForm">
+        <form method="POST" action="<?= base_url('user/edit/' . $user->id) ?>" id="editUserForm">
             <?= csrf_field() ?>
             <div class="form-group">
                 <label for="username">
@@ -222,7 +222,7 @@
                     id="username" 
                     name="username" 
                     placeholder="Εισάγετε όνομα χρήστη"
-                    value="<?= esc($user['username'] ?? old('username', '')) ?>"
+                    value="<?= esc($user->username ?? old('username', '')) ?>"
                     required
                     minlength="3"
                     maxlength="100"
@@ -240,46 +240,12 @@
                     id="email" 
                     name="email" 
                     placeholder="example@email.com"
-                    value="<?= esc($user['email'] ?? old('email', '')) ?>"
+                    value="<?= esc($user->email ?? old('email', '')) ?>"
                     required
                     maxlength="150"
                 >
                 <div class="help-text">Μέγιστο 150 χαρακτήρες, πρέπει να είναι μοναδικό</div>
                 <div class="error-message"></div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="first_name">
-                        <i class="fas fa-id-card"></i> Όνομα <span class="required">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        id="first_name" 
-                        name="first_name" 
-                        placeholder="Όνομα"
-                        value="<?= esc($user['first_name'] ?? old('first_name', '')) ?>"
-                        required
-                        maxlength="100"
-                    >
-                    <div class="error-message"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="last_name">
-                        <i class="fas fa-id-card"></i> Επώνυμο <span class="required">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        id="last_name" 
-                        name="last_name" 
-                        placeholder="Επώνυμο"
-                        value="<?= esc($user['last_name'] ?? old('last_name', '')) ?>"
-                        required
-                        maxlength="100"
-                    >
-                    <div class="error-message"></div>
-                </div>
             </div>
 
             <div class="form-group">

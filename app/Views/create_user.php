@@ -241,40 +241,6 @@
                 <div class="error-message"></div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="first_name">
-                        <i class="fas fa-id-card"></i> Όνομα <span class="required">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        id="first_name" 
-                        name="first_name" 
-                        placeholder="Όνομα"
-                        value="<?= old('first_name') ?>"
-                        required
-                        maxlength="100"
-                    >
-                    <div class="error-message"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="last_name">
-                        <i class="fas fa-id-card"></i> Επώνυμο <span class="required">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        id="last_name" 
-                        name="last_name" 
-                        placeholder="Επώνυμο"
-                        value="<?= old('last_name') ?>"
-                        required
-                        maxlength="100"
-                    >
-                    <div class="error-message"></div>
-                </div>
-            </div>
-
             <div class="form-group">
                 <label for="password">
                     <i class="fas fa-lock"></i> Κωδικός Πρόσβασης <span class="required">*</span>
