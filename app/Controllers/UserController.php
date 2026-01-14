@@ -30,14 +30,6 @@ class UserController extends BaseController
         return view('users', $data);
     }
 
-
-    private function get_user_by_id(int $id): ?User
-    {
-        $users = new UserModel();
-        $user  = $users->findById($id);
-        return $user;
-    }
-
     public function create_user(): mixed
     {
         if ($this->request->getMethod() !== 'POST') {
